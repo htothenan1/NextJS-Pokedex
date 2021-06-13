@@ -9,9 +9,13 @@ export default function Home({ pokemon }) {
 				{pokemon.map((pokeman, index) => (
 					<li key={index}>
 						<Link href={`/pokemon?id=${index + 1}`}>
-							<a>
-								<img src={pokeman.image} alt={pokeman.name} />
-								<span>{index + 1}</span>
+							<a className="border p-4 border-gray my-2 capitalize flex items-center text-lg bg-gray-200 rounded-md">
+								<img
+									className="w-40 h-40 mr-3"
+									src={pokeman.image}
+									alt={pokeman.name}
+								/>
+								<span className="mr-2 font-bold">{index + 1}.</span>
 								{pokeman.name}
 							</a>
 						</Link>
